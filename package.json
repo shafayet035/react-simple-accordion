@@ -1,0 +1,25 @@
+{
+  "name": "react-simple-accordion",
+  "version": "1.0.0",
+  "description": "Simple Accordion for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "accordion",
+    "component",
+    "collapse",
+    "dropdown"
+  ],
+  "author": "Shafayet Hossain",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.0.19",
+    "@types/styled-components": "^5.1.26",
+    "react": "^18.2.0",
+    "styled-components": "^5.3.5",
+    "typescript": "^4.8.3"
+  }
+}
