@@ -20,9 +20,13 @@ type propTypes = {
 const AccordionItem = ({ children, header, setIndexHandler, index, currentIndex }: propTypes) => {
   const isOpen = currentIndex === index;
 
+  const setHandler = (): void => {
+    setIndexHandler(currentIndex === index ? -1 : index);
+  };
+
   return (
     <AccordionItemStyle data-testid="accordionItem">
-      <AccordionItemHeader onClick={() => setIndexHandler(index)}>
+      <AccordionItemHeader onClick={setHandler}>
         <AccordionItemHeaderTitle data-testid="accordionItemTitle">{header}</AccordionItemHeaderTitle>
         <AccordionItemIcon src={DownArrow} alt="Icon" open={isOpen} />
       </AccordionItemHeader>

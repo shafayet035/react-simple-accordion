@@ -12,6 +12,7 @@ export const AccordionItemHeader = styled.div`
   alight-items: center;
   border-bottom: 1px solid #e3e3e3;
   padding: 15px;
+  user-select: none;
 `;
 export const AccordionItemHeaderTitle = styled.h3`
   font-style: normal;
