@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Simple Accordion for React",
   "scripts": {
-    "rollup": "rollup -c",
+    "build": "tsc --outDir dist --declarationDir dist/types --declaration true && rollup -c",
+    "prepare": "npm run build",
     "test": "jest"
   },
   "keywords": [
