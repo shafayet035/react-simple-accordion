@@ -18,12 +18,13 @@ export const AccordionItemHeaderTitle = styled.h3`
   font-style: normal;
   font-weight: 500;
 `;
-export const AccordionItemIcon = styled.img<{ open: boolean; src: any }>`
+export const AccordionItemIcon = styled.div<{ open: boolean }>`
   width: 25px;
   height: auto;
   cursor: pointer;
-  transition: transform 0.3s ease-in;
-  transform: rotate(${(props) => (props.open ? "180deg" : "0deg")});
+  transition: transform 0.2s ease-in;
+  transform: rotate(${(props) => (props.open ? "-180deg" : "0deg")});
+  margin-right: ${(props) => (props.open ? "5px" : "0")};
 `;
 export const AccordionItemBody = styled.div`
   padding: 15px;

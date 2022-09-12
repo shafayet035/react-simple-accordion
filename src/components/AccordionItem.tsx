@@ -1,5 +1,5 @@
 import React from "react";
-import DownArrow from "../assets/DownArrow.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
   AccordionItemBody,
@@ -8,6 +8,7 @@ import {
   AccordionItemIcon,
   AccordionItemStyle,
 } from "./AccordionStyle";
+import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
 
 type propTypes = {
   children: string | JSX.Element;
@@ -28,7 +29,9 @@ const AccordionItem = ({ children, header, setIndexHandler, index, currentIndex 
     <AccordionItemStyle data-testid="accordionItem">
       <AccordionItemHeader onClick={setHandler}>
         <AccordionItemHeaderTitle data-testid="accordionItemTitle">{header}</AccordionItemHeaderTitle>
-        <AccordionItemIcon src={DownArrow} alt="Icon" open={isOpen} />
+        <AccordionItemIcon open={isOpen}>
+          <FontAwesomeIcon icon={faArrowCircleDown} size="lg" />
+        </AccordionItemIcon>
       </AccordionItemHeader>
       {isOpen ? <AccordionItemBody data-testid="accordionItemBody">{children}</AccordionItemBody> : ""}
     </AccordionItemStyle>

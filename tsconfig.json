@@ -16,7 +16,8 @@
     // "outDir": "dist",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "types": ["jest", "node"]
   },
   "exclude": ["dist", "node_modules", "src/**/*.test.tsx", "src/**/*.stories.tsx"],
   "include": ["src/components", "custom.d.ts"]
